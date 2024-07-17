@@ -1,29 +1,39 @@
-import React from 'react'
-import './header.css'
-import logo from '../../assets/logo/logo.png'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./header.css";
+import logo from "../../assets/logo/logo.png";
 function Header() {
   return (
     <>
-    <header>
+      <header>
         <div className="header-logo">
-            <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="header-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">sponsors</a></li>
-                <li><a href="#">opportunities</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="#">sponsors</Link>
+            </li>
+            <li>
+              <Link to="#">opportunities</Link>
+            </li>
+            <li>
+              <Link to="#">blog</Link>
+            </li>
+            <li>
+              <Link to="#">contact</Link>
+            </li>
+          </ul>
         </div>
         <div className="getstarted">
-            <a href="#">Get Started</a>
+          <Link to="Login">Get Started</Link>
         </div>
-    </header>
+      </header>
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;

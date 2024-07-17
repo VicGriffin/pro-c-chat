@@ -1,23 +1,24 @@
-import { useState } from 'react'
-import { Route , Router,Routes , BrowserRouter } from 'react-router-dom'
-import Home  from './pages/home/Home'
-import Login  from './pages/login/Login.jsx'
-import Register from './pages/signup/Signup.jsx'
-import Header from './components/header/Header'
-import './App.css'
+import { useState } from "react";
+import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
+import Home from "./pages/home/Home.jsx";
+import Login from "./pages/login/Login.jsx";
+import Register from "./pages/signup/Signup.jsx";
+import Header from "./components/header/Header";
+import "./App.css";
 
 function App() {
-
-   return (
+  return (
     <>
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-    </Routes>
-    </BrowserRouter>
-    
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
