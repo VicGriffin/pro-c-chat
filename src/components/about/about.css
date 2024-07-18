@@ -1,75 +1,77 @@
-.about{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.about-div1{
-    display: flex;
-    flex-direction: row;
+.about-div1 {
+  display: flex;
+  flex-direction: row;
 }
-.about-first h2{
-    margin-left: 20px;
-    text-transform: capitalize;
+.about-first h2 {
+  margin-left: 20px;
+  text-transform: capitalize;
 }
-.about-first img{
-    margin-left: 20px ;
-    width: 200px;
-    height: 200px;
+.about-first img {
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
 }
 .about-first p,
 .about-second p,
 .about-third p,
-.about-forth p{
-    display: grid;
-    place-content: center;
-    padding: 20px;
+.about-forth p {
+  display: grid;
+  place-content: center;
+  padding: 20px;
 }
-.about-second h2{
-    text-transform: capitalize;
+.about-second h2 {
+  text-transform: capitalize;
 }
-.about-second img{
-    width: 200px;
-    height: 200px;
-}.about-third h2{
-    text-transform: capitalize;
+.about-second img {
+  width: 200px;
+  height: 200px;
 }
-.about-third{
-    margin-left: -30px;
+.about-third h2 {
+  text-transform: capitalize;
 }
-.about-third img{
-    margin-left: -30px;
-    width: 200px;
-    height: 200px;
-}.about-forth h2{
-    text-transform: capitalize;
+.about-third {
+  margin-left: -30px;
 }
-.about-forth img{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+.about-third img {
+  margin-left: -30px;
+  width: 200px;
+  height: 200px;
 }
-.about-div2{
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+.about-forth h2 {
+  text-transform: capitalize;
+}
+.about-forth img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+.about-div2 {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .about-div2 h2,
 .about-div2 p,
-.about-div2 a{
-    display: grid;
-    place-content: center;
+.about-div2 a {
+  display: grid;
+  place-content: center;
 }
-.about-div2 a{
-    display: grid;
-    place-content: center;
-    text-decoration: none;
-    background-color: #00001a;
-    width: 250px;
-    margin-top: 10px;
-    padding: 10px 5px;
-    border-radius: 10px;
+.about-div2 a {
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  background-color: #00001a;
+  width: 250px;
+  margin-top: 10px;
+  padding: 10px 5px;
+  border-radius: 10px;
 }

@@ -1,0 +1,25 @@
+.sponsor-card {
+  cursor: pointer;
+  width: 250px;
+  height: 100%;
+  background-color: #00001a;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.sponsor-card img {
+  width: 100px;
+  margin-bottom: 10px;
+}

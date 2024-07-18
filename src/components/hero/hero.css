@@ -3,7 +3,7 @@
     url(../../assets/hero/hero4.jpeg);
   background-size: cover;
   background-position: center;
-  height: 80vh;  
+  height: 80vh;
   display: grid;
   place-content: center;
 }

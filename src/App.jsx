@@ -19,8 +19,7 @@ function App() {
           <Route path="/signup" element={<Register />} />
           <Route path="/sponsors" element={<Sponsors />} />
         </Routes>
-        <Footer/>
-
+        <Footer />
       </BrowserRouter>
     </>
   );
