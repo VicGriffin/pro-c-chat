@@ -4,7 +4,7 @@ import "./signup.css";
 function Signup() {
   return (
     <>
-      <div className="signup-container">
+      {/* <div className="signup-container">
         <div className="signup-form-container">
           <h1>Sign Up</h1>
           <form className="signup-form">
@@ -58,7 +58,7 @@ function Signup() {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

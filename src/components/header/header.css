@@ -21,7 +21,14 @@ header {
 .header-logo img {
   width: 80px;
   height: 80px;
+  transition: box-shadow 0.3s ease; 
+  cursor: pointer;
 }
+
+.header-logo img:hover {
+  box-shadow: 0 0 20px #00001a; 
+}
+
 .header-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +39,15 @@ header {
 }
 header a {
   text-decoration: none;
+  color: #00001a;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+header a:hover {
+  color: #ff6347; 
+  text-decoration: underline;
 }
 .getstarted a {
   background-color: rgba(255, 255, 255, 0.2);

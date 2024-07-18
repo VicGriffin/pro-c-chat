@@ -15,7 +15,7 @@ function Login() {
             <input
               className="login-form__body__input-group__input"
               type="text"
-              placeholder="Email"
+              placeholder="Enter Email"
             />
           </div>
           <div className="login-form__body__input-group">
@@ -25,7 +25,7 @@ function Login() {
             <input
               className="login-form__body__input-group__input"
               type="password"
-              placeholder="Password"
+              placeholder="Enter Password"
             />
           </div>
         </div>

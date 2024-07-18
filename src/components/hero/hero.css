@@ -1,24 +1,25 @@
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url(../../assets/hero/hero.jpeg);
+    url(../../assets/hero/hero4.jpeg);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 80vh;  
   display: grid;
   place-content: center;
 }
 .hero-title {
-  color: #919191;
+  color: black;
   font-size: 50px;
   display: grid;
   place-content: center;
+  margin-top: 70px;
 }
 .hero-subtitle {
   display: grid;
   place-content: center;
-  color: white;
+  color: #00001a;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.8rem;
   margin-right: 100px;
   margin-left: 150px;
