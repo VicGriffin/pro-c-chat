@@ -1,10 +1,12 @@
 .signup {
-  display: grid;
-  place-content: center;
-  margin-top: 50px;
-  height: 80vh;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;    
+  gap: 6rem;
 }
 .signup-form-container {
+  margin-top: 120px;
   text-align: center;
 }
 .signup-form .form-group {

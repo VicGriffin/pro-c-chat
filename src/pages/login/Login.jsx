@@ -1,3 +1,4 @@
+import logo from "../../assets/logo/logo.png";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
@@ -23,6 +24,10 @@ function Login() {
 
   return (
     <>
+    <section className="login">
+    <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
       <div className="login-form">
         <div className="login-form__header">Login</div>
         <form onSubmit={formik.handleSubmit} className="login-form__body">
@@ -70,6 +75,8 @@ function Login() {
           click to <Link to="/Signup">signup</Link>
         </div>
       </div>
+      
+    </section>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import logo from "../../assets/logo/logo.png";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
@@ -18,6 +19,9 @@ function Signup() {
 
   return (
     <section className="signup">
+    <div className="logo">
+          <img src={logo} alt="logo" />
+    </div>
     <div className="signup-container">
       <div className="signup-form-container">
         <h1>Sign Up</h1>

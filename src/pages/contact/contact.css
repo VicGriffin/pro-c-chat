@@ -1,0 +1,12 @@
+.contact {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: -40px;
+}
+.contact .logo{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
