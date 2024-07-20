@@ -14,7 +14,7 @@
   place-content: center;
   margin-top: 70px;
 }
-.hero-subtitle {
+.hero-subtitle p{
   display: grid;
   place-content: center;
   color: #00001a;
