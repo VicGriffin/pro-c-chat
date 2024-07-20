@@ -1,9 +1,10 @@
 .signup {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;    
-  gap: 6rem;
+  gap: 3rem;
 }
 .signup-form-container {
   margin-top: 120px;
