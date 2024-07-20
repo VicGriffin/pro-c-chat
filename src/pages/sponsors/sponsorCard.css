@@ -23,3 +23,7 @@
   width: 100px;
   margin-bottom: 10px;
 }
+.sponsor-card p{
+  font-size: 1.2rem;
+  color: black;
+}

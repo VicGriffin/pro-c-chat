@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import give_img from "../../assets/about/gidea.png";
 import findaspo_img from "../../assets/about/findaspo.png";
 import getfunded_img from "../../assets/about/getfunded.png";
@@ -47,7 +48,7 @@ function About() {
             collaborations that bring mutual success. Join us and experience
             unparalleled brand synergy.
           </p>
-          <a href="">learn more</a>
+          <Link to="/blog">learn more</Link>
         </div>
       </section>
     </>

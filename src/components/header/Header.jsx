@@ -21,7 +21,7 @@ function Header() {
               <Link to="#">opportunities</Link>
             </li>
             <li>
-              <Link to="#">blog</Link>
+              <Link to="/blog">blog</Link>
             </li>
             <li>
               <Link to="#">contact</Link>

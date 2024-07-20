@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../../assets/logo/logo.png";
 import SponsorCard from './Sponsorcard.jsx';
 import ceo1 from '../../assets/sponyo/ceo1.jpeg';
 import charlse from '../../assets/sponyo/CHARLES.jpeg';
@@ -38,7 +39,9 @@ const brandImages = [
 function Sponsors() {
   return (
     <section className="sponsors">
-      <h1>hello</h1>
+      <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
       <div className="sponsors-heading">
         <h2>available Sponsors</h2>
       </div>
