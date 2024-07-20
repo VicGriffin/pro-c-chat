@@ -1,7 +1,7 @@
 .blog-container {
     max-width: 90%;
     margin: 20px auto;
-    margin-top: 60px;
+    margin-top: -60px;
     padding: 20px;
     background-color: #242424;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

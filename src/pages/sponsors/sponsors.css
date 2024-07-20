@@ -1,6 +1,7 @@
 .sponsors {
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: -40px;
 }
 .sponsors .logo{
   margin: 0 auto;
@@ -35,7 +36,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  color: bisque;
 }
 .brands h2{
     text-transform: capitalize;
