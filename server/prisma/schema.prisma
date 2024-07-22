@@ -13,11 +13,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
 model User {
-  id           String   @id @default(uuid())
-  Username    String
-  Email        String   @unique
-  Password     String
+  id       String   @id @default(uuid())
+  username String   @unique
+  email    String   @unique
+  password String
 
   @@map("users")
 }

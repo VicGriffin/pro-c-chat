@@ -22,7 +22,7 @@ function Hero() {
             About &darr;
           </Link>
           <a href="#projects" className="hero-button">
-            Get started &rarr;
+            more &rarr;
           </a>
         </div>
       </section>

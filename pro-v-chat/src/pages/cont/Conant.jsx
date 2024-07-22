@@ -1,12 +1,10 @@
+import './conant.css'
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { RiNewsLine } from 'react-icons/ri';
 import logo from "../../assets/logo/logo.png";
-import './contact.css';
 
-function Contact() {
+function Conant() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -53,42 +51,17 @@ function Contact() {
   });
 
   return (
-    <section className='contact'>
-      <div className="logo">
+    <>
+    <div className="conant">
+      
+    <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <div className="cont">
-        <div className="cont-form">
-          <div className="contact-info">
-            <h3 className="title">Let's get in touch</h3>
-            <p className="text">
-              Reach out to us for any inquiries about our furniture collections. We're here to help you find your perfect piece.
-            </p>
-            <div className="info-cont">
-              <p>Nairobi, Kenya</p>
-            </div>
-            <div className="info-cont">
-              <p>griffinfurniture@gmail.com</p>
-            </div>
-            <div className="info-cont">
-              <p>+25411278791</p>
-            </div>
-            <div className="social-media">
-              <p>Connect with us:</p>
-              <div className="btn-icon-section">
-                <button className='social-icon'><a href="https://www.facebook.com/victor.kamau.188/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></button>
-                <button className='social-icon'><a href="https://twitter.com/victorkama83492" target='_blank' rel="noopener noreferrer"><FaTwitter /></a></button>
-                <button className='social-icon'><a href="https://www.instagram.com/vic_griffin254/" target='_blank' rel="noopener noreferrer"><FaInstagram /></a></button>
-                <button className='social-icon'><a href="https://www.linkedin.com/in/victor-kamau-30b23720b/" target='_blank' rel="noopener noreferrer"><FaLinkedin /></a></button>
-                <button className='social-icon'><a href="https://www.flipsnack.com/CA78AADD75E/griffins-furniture-magazine/full-view.html" target='_blank' rel="noopener noreferrer"><RiNewsLine /></a></button>
-              </div>
-            </div>
-          </div>
-          <div className="contact-form">
+    <div className="contact-form">
             <span className='circle one'></span>
             <span className='circle two'></span>
             <form onSubmit={formik.handleSubmit}>
-              <h3 className="titl">Contact us</h3>
+              <h3 className="titl">message the inventor</h3>
               <div className="input-container">
                 <input type="text" name="name" className='input' onChange={formik.handleChange} value={formik.values.name} />
                 <label htmlFor="name">Your Name</label>
@@ -119,10 +92,9 @@ function Contact() {
               )}
             </form>
           </div>
-        </div>
-      </div>
-    </section>
-  );
+    </div>
+    </>
+  )
 }
 
-export default Contact;
+export default Conant

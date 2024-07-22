@@ -1,8 +1,9 @@
-import logo from "../../assets/logo/logo.png";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import logo from "../../assets/logo/logo.png";
+import { useAuth } from "../../AuthContext.jsx";
 import "./login.css";
 
 const validationSchema = Yup.object({
@@ -11,23 +12,63 @@ const validationSchema = Yup.object({
 });
 
 function Login() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
+  const notifySuccess = () => {
+    console.log("Login successful!");
+  };
+
+  const notifyError = (message) => {
+    console.error(message);
+  };
+
+  const handleSubmit = async (values) => {
+    setError('');
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:3001/login/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      setLoading(false);
+      if (response.ok) {
+        const userData = await response.json();
+        if (login) login(userData);
+        notifySuccess();
+        navigate('/');
+      } else {
+        const errorData = await response.json();
+        const errorMessage = errorData.message || 'Login failed';
+        setError(errorMessage);
+        notifyError(errorMessage);
+      }
+    } catch (error) {
+      setLoading(false);
+      setError(error.message);
+      notifyError(error.message);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log("Form data", values);
-    },
+    onSubmit: handleSubmit,
   });
 
   return (
-    <>
     <section className="login">
-    <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
       <div className="login-form">
         <div className="login-form__header">Login</div>
         <form onSubmit={formik.handleSubmit} className="login-form__body">
@@ -67,17 +108,16 @@ function Login() {
               <div className="error">{formik.errors.password}</div>
             ) : null}
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button type="submit" className="btn btn-primary" disabled={loading}>
+            {loading ? 'Submitting...' : 'Submit'}
           </button>
         </form>
+        {error && <div className="error">{error}</div>}
         <div className="login-form__footer">
-          click to <Link to="/Signup">signup</Link>
+          click to <Link to="/signup">signup</Link>
         </div>
       </div>
-      
     </section>
-    </>
   );
 }
 

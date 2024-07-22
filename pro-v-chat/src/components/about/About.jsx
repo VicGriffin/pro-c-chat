@@ -13,6 +13,8 @@ function About() {
         <div className="about-div1">
           <div className="about-first">
             <h2>give an idea</h2>
+            <span className='circle one'></span>
+            <span className='circle two'></span>
             <img src={give_img} alt="give an idea" />
             <p>
               Give an idea to the world and get funded by the people who love

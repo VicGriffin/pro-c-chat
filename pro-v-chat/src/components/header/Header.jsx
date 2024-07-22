@@ -1,38 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./header.css";
-import logo from "../../assets/logo/logo.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../AuthContext.jsx';
+import './header.css';
+import logo from '../../assets/logo/logo.png';
+
 function Header() {
+  const { user, logout } = useAuth();
+
   return (
-    <>
-      <header>
-        <div className="header-logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="header-nav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/sponsors">sponsors</Link>
-            </li>
-            <li>
-              <Link to="#">opportunities</Link>
-            </li>
-            <li>
-              <Link to="/blog">blog</Link>
-            </li>
-            <li>
-              <Link to="/contact">contact</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="getstarted">
-          <Link to="Login">Get Started</Link>
-        </div>
-      </header>
-    </>
+    <header>
+      <div className="header-logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="header-nav">
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/sponsors">Sponsors</Link></li>
+          <li><Link to="#">Opportunities</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </div>
+      <div className="getstarted">
+        {user ? (
+          <div>
+            <span>Welcome to SFT {user.name}</span>
+            <button onClick={logout}>Logout</button>
+          </div>
+        ) : (
+          <Link to="/login">Get Started</Link>
+        )}
+      </div>
+    </header>
   );
 }
 

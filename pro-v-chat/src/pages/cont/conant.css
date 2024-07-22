@@ -1,0 +1,14 @@
+.conant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.conant .contact-form{
+    width: 60%;
+}
+.conant .logo{
+    width: 300px;
+}

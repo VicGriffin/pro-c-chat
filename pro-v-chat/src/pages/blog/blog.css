@@ -1,11 +1,11 @@
 .blog-container {
     max-width: 90%;
     margin: 20px auto;
-    margin-top: -60px;
     padding: 20px;
     background-color: #242424;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-top: 60px;
 }
 .blog-container .logo{
     margin: 0 auto;

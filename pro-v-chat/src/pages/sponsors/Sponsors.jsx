@@ -45,6 +45,8 @@ function Sponsors() {
       <div className="sponsors-heading">
         <h2>available Sponsors</h2>
       </div>
+      <span className='circle one'></span>
+            <span className='circle two'></span>
       <div className="sponsors-container">
         {sponsorsData.map((sponsor, index) => (
           <SponsorCard 

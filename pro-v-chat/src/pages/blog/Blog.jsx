@@ -10,6 +10,8 @@ function Blog() {
           <img src={logo} alt="logo" />
         </div>
         <h1>Get Sponsored by Companies and Brands</h1>
+        
+        
 
         <h2>Unlock Exclusive Opportunities and Elevate Your Brand</h2>
         <p>In today’s competitive market, standing out is more crucial than ever. One powerful way to enhance your visibility and drive growth is by securing sponsorships from top companies and brands. When you partner with industry leaders, you gain access to unique marketing channels and audiences that can propel your business to new heights.</p>
@@ -22,7 +24,8 @@ function Blog() {
             <li><strong>Broader Reach:</strong> Tap into the established audiences of your sponsors. These companies have spent years building their reputation and customer base. By associating with them, you instantly gain credibility and a wider audience.</li>
             <li><strong>Increased Media Exposure:</strong> Sponsored events and initiatives often attract significant media attention. Your brand can benefit from this coverage, leading to greater awareness and recognition.</li>
         </ul>
-
+        <span className='circle one'></span>
+        <span className='circle two'></span>
         <h3>2. Access to Unique Marketing Channels:</h3>
         <ul>
             <li><strong>Co-Branding Opportunities:</strong> Work with your sponsors on co-branded campaigns that leverage both your strengths. These campaigns can be more impactful than those you could create on your own.</li>

@@ -2,11 +2,11 @@ import express from 'express';
 import { config } from 'dotenv';
 import cors from 'cors';
 import usersRouter from './routers/user.routes.js';  
-import loginRouter from "./routers/login.routes.js";
+import loginRouter from './routers/login.routes.js';
+// import contactRouter from './routers/contact.routes.js'
 
+config(); 
 
-
-config();
 const app = express();
 
 app.use(cors({
@@ -17,7 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/users', usersRouter);
-app.use('/users', loginRouter);
+app.use('/login', loginRouter);
+// app.use('/users', contactRouter);
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ success: false, message: err.message });
+});
 
 app.listen(3001, () => {
   console.log('Server is running on port 3001...');
