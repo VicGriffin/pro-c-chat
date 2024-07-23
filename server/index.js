@@ -5,6 +5,7 @@ import usersRouter from './routers/user.routes.js';
 import loginRouter from './routers/login.routes.js';
 import contactRouter from './routers/contact.routes.js'
 import conantRouter from './routers/conant.routes.js';
+import meetingRouter from './routers/meeting.routes.js';
 config(); 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/', contactRouter);
 app.use('/', conantRouter);
+app.use('/', meetingRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

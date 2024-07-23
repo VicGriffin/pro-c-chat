@@ -41,3 +41,14 @@ model Conant {
 
   @@map("Conant")
 }
+
+model Meeting {
+  id        String   @id @default(uuid())
+  email     String
+  date      DateTime
+  time      DateTime
+  platform  String
+  meetingId String
+  
+  @@map("Meeting")
+}

@@ -62,13 +62,13 @@ function Contact() {
           <div className="contact-info">
             <h3 className="title">Let's get in touch</h3>
             <p className="text">
-              Reach out to us for any inquiries about our furniture collections. We're here to help you find your perfect piece.
+              Reach out to us for any inquiries about our company. We're here to help you find your perfect piece.
             </p>
             <div className="info-cont">
               <p>Nairobi, Kenya</p>
             </div>
             <div className="info-cont">
-              <p>griffinfurniture@gmail.com</p>
+              <p>sft@gmail.com</p>
             </div>
             <div className="info-cont">
               <p>+25411278791</p>

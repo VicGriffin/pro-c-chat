@@ -1,9 +1,5 @@
 .footer-container {
-    background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.1)
-  );
+  background: linear-gradient(to right, #5f2c82, #49a09d);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0 0.5);

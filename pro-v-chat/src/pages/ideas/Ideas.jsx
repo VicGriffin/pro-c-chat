@@ -6,6 +6,7 @@ import './ideas.css';
 function Ideas() {
   const idealistName = 'Victor Griffin';
   const projectTitle = 'Do Away with Old Clothes in Style';
+  const idealistEmail = 'vickamworkpro@gmail.com'
 
   return (
     <>
@@ -21,7 +22,8 @@ function Ideas() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero eu aliquam vulputate, nunc nunc ultricies nisl, ut lacinia libero nunc eu libero. Sed euismod,
             </div>
             <div className="idealist-name">{idealistName}</div>
-            <Link to={`/meeting?name=${encodeURIComponent(idealistName)}&title=${encodeURIComponent(projectTitle)}`}>
+            <div className="idealist-name">{idealistEmail}</div>
+            <Link to={`/meeting?name=${encodeURIComponent(idealistName)}&title=${encodeURIComponent(projectTitle)}&email=${encodeURIComponent(idealistEmail)}`}>
               <button>Schedule a Meeting</button>
             </Link>
           </div>
