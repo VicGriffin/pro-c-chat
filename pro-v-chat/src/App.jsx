@@ -15,6 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Meeting from "./pages/meeting/Meeting.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ChatBotComponent from "./components/chatbot/ChatBot.jsx";
 import "./App.css";
 
 function App() {
@@ -26,13 +27,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
-          <Route path="/sponsors" element={ <ProtectedRoute><Sponsors /></ProtectedRoute>} />
+          <Route path="/sponsors" element={<ProtectedRoute><Sponsors /></ProtectedRoute>} />
           <Route path="/blog" element={<ProtectedRoute><Blog /></ProtectedRoute>} />
           <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
           <Route path="/ideas" element={<Ideas />} />
           <Route path="/conant" element={<Conant />} />
           <Route path="/meeting" element={<Meeting />} />
         </Routes>
+      <ChatBotComponent />
         <Footer />
       </BrowserRouter>
       <ToastContainer />
