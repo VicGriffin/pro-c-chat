@@ -24,7 +24,7 @@ import './sponsors.css';
 const sponsorsData = [
   { imgSrc: ceo1, name: 'CEO 1', description: 'Crafting Experiences and Building Brands.' },
   { imgSrc: charlse, name: 'Charles', description: 'innovations and crafts around media I will be the man.' },
-  { imgSrc: dwayne, name: 'Dwayne', description: 'Lorem ipsum dolor sit amet.' },
+  { imgSrc: dwayne, name: 'Dwayne', description: 'I am the game-changer for your brand' },
   { imgSrc: elon, name: 'Elon', description: 'surprise me anything is possible.' },
   { imgSrc: idris, name: 'Idris', description: ' Winning Hearts and Loyalty.' },
   { imgSrc: jeff, name: 'Jeff', description: 'Riding the Wave of Digital Influence.' },

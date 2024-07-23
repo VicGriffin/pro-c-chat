@@ -52,6 +52,9 @@ function Meeting() {
   return (
     <div className="meeting-details">
       <h2>Schedule a Virtual Meeting</h2>
+      
+      <span className='circle one'></span>
+            <span className='circle two'></span>
       <form onSubmit={formik.handleSubmit}>
         <div className="input-container">
           <label htmlFor="date"></label>
@@ -75,7 +78,7 @@ function Meeting() {
           {formik.touched.platform && formik.errors.platform && <p>{formik.errors.platform}</p>}
         </div>
         <div className="input-container">
-          <label htmlFor="info">Additional Notes</label>
+          <label htmlFor="info">Additional info</label>
           <textarea name="info" onChange={formik.handleChange} value={formik.values.info}></textarea>
           {formik.touched.info && formik.errors.info && <p>{formik.errors.info}</p>}
         </div>
