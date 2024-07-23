@@ -20,18 +20,18 @@ function Conant() {
   const sponsorImgSrc = query.get('imgSrc');
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+    yourname: Yup.string().required("Name is required"),
     email: Yup.string().email("Invalid email format").required("Email is required"),
     phone: Yup.string().required("Phone number is required"),
     link: Yup.string().url("Invalid URL format").required("Link to your project is required"),
-    message: Yup.string().required("Message is required"),
+    coverletter: Yup.string().required("Message is required"),
   });
 
   const handleSubmit = async (values) => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('', {
+      const response = await fetch('http://localhost:3001/conant', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,11 +53,11 @@ function Conant() {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
+      yourname: '',
       email: '',
       phone: '',
       link: '',
-      message: '',
+      coverletter: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
@@ -69,7 +69,7 @@ function Conant() {
 
   const sendEmail = () => {
     emailjs
-      .sendForm('service_xjiv8cj', 'template_c278qsn', form.current, 'GDx5TJwJersgPgWeI')
+      .sendForm('service_xjiv8cj', 'template_h6r7ijw', form.current, 'GDx5TJwJersgPgWeI')
       .then(
         () => {
           console.log('SUCCESS!');
@@ -93,9 +93,9 @@ function Conant() {
           <h3 className="titl">Message {sponsorName}</h3>
           <p>{sponsorDescription}</p>
           <div className="input-container">
-            <input type="text" name="name" className='input' onChange={formik.handleChange} value={formik.values.name} />
-            <label htmlFor="name">Your name</label>
-            {formik.touched.name && formik.errors.name && <p>{formik.errors.name}</p>}
+            <input type="text" name="yourname" className='input' onChange={formik.handleChange} value={formik.values.name} />
+            <label htmlFor="yourname">Your name</label>
+            {formik.touched.yourname && formik.errors.yourname && <p>{formik.errors.yourname}</p>}
           </div>
           <div className="input-container">
             <input type="email" name="email" className='input' onChange={formik.handleChange} value={formik.values.email} />
@@ -113,9 +113,9 @@ function Conant() {
             {formik.touched.link && formik.errors.link && <p>{formik.errors.link}</p>}
           </div>
           <div className="input-container text-area">
-            <textarea name="message" className='input' onChange={formik.handleChange} value={formik.values.message}></textarea>
-            <label htmlFor="message">Message</label>
-            {formik.touched.message && formik.errors.message && <p>{formik.errors.message}</p>}
+            <textarea name="coverletter" className='input' onChange={formik.handleChange} value={formik.values.coverletter}></textarea>
+            <label htmlFor="message">coverletter</label>
+            {formik.touched.coverletter && formik.errors.coverletter && <p>{formik.errors.coverletter}</p>}
           </div>
           <button type="submit" className="btn" disabled={loading}>
             {loading ? 'Loading...' : 'Send'}

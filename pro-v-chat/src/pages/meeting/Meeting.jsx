@@ -24,7 +24,7 @@ function Meeting() {
     date: Yup.date().min(today, "Cannot select past dates").required("Date is required"),
     time: Yup.string().min(now, "cannot select past times" ).required("Time is required"),
     platform: Yup.string().required("Platform is required"),
-    info: Yup.string(),
+    meetingId: Yup.string().required("meeting id required")
   });
 
   const handleSubmit = async (values) => {
@@ -56,7 +56,7 @@ function Meeting() {
       date: '',
       time: '',
       platform: '',
-      info: '',
+      meetingId: '',
     },
     validationSchema: validationSchema,
     onSubmit: handleSubmit,
@@ -65,11 +65,13 @@ function Meeting() {
   return (
     <div className="meeting-details">
       <h2>Schedule a Virtual Meeting</h2>
+      
+      <form onSubmit={formik.handleSubmit}>
       <p>Idealist: {idealistName}</p>
       <p>Project Title: {projectTitle}</p>
+      <p>idealist email: {idealistEmail}</p>
       <span className='circle one'></span>
       <span className='circle two'></span>
-      <form onSubmit={formik.handleSubmit}>
         <div className="input-container">
           <input
             type="date"
@@ -101,9 +103,9 @@ function Meeting() {
           {formik.touched.platform && formik.errors.platform && <p>{formik.errors.platform}</p>}
         </div>
         <div className="input-container">
-          <label htmlFor="info">Additional info</label>
-          <textarea name="info" onChange={formik.handleChange} value={formik.values.info}></textarea>
-          {formik.touched.info && formik.errors.info && <p>{formik.errors.info}</p>}
+          <label htmlFor="meetingId">meeting id</label>
+          <textarea name="meetingId" onChange={formik.handleChange} value={formik.values.meetingId}></textarea>
+          {formik.touched.meetingId && formik.errors.meetingId && <p>{formik.errors.meetingId}</p>}
         </div>
         <button type="submit" disabled={loading}>
           {loading ? 'Scheduling...' : 'Schedule Meeting'}
