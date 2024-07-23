@@ -21,7 +21,7 @@ function Contact() {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('http://localhost:3001/users/contacts', {
+      const response = await fetch('http://localhost:3001/contacts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

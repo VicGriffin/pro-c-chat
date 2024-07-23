@@ -11,6 +11,8 @@ import Footer from "./components/footer/Footer.jsx";
 import { AuthProvider } from "./AuthContext.jsx";
 import Ideas from "./pages/ideas/Ideas.jsx";
 import Conant from "./pages/cont/Conant.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Meeting from "./pages/meeting/Meeting.jsx";
 import "./App.css";
 
 function App() {
@@ -22,11 +24,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
-          <Route path="/sponsors" element={<Sponsors />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/sponsors" element={ <ProtectedRoute><Sponsors /></ProtectedRoute>} />
+          <Route path="/blog" element={<ProtectedRoute><Blog /></ProtectedRoute>} />
+          <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
           <Route path="/ideas" element={<Ideas />} />
           <Route path="/conant" element={<Conant />} />
+          <Route path="/meeting" element={<Meeting />} />
         </Routes>
         <Footer />
       </BrowserRouter>

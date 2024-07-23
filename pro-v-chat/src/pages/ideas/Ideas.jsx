@@ -53,7 +53,7 @@ function Ideas() {
                 <div className="idealist-name">victor griffin</div>
                 <textarea name="message" id="" className='input'></textarea>
                 <button>send message</button>  
-                <button>schedule a meeting</button>
+                <Link to="/meeting"><button>schedule a meeting</button></Link>
             </div>
         </div>
     </section>

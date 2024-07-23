@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './sponsorCard.css';
 
 function SponsorCard({ imgSrc, name, description }) {
@@ -7,7 +8,7 @@ function SponsorCard({ imgSrc, name, description }) {
     <div className="sponsor-card">
       <img src={imgSrc} alt={name} />
       <p>{description}</p>
-      <a href="#">Get in touch</a>
+      <Link to={`/conant?name=${name}&description=${description}&imgSrc=${imgSrc}`}>Get in touch</Link>
     </div>
   );
 }

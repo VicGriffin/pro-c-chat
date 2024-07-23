@@ -22,14 +22,14 @@ import sp10 from '../../assets/sponyo/brands/sp10.png';
 import './sponsors.css';
 
 const sponsorsData = [
-  { imgSrc: ceo1, name: 'CEO 1', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: charlse, name: 'Charles', description: 'Lorem ipsum dolor sit amet.' },
+  { imgSrc: ceo1, name: 'CEO 1', description: 'Crafting Experiences and Building Brands.' },
+  { imgSrc: charlse, name: 'Charles', description: 'innovations and crafts around media I will be the man.' },
   { imgSrc: dwayne, name: 'Dwayne', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: elon, name: 'Elon', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: idris, name: 'Idris', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: jeff, name: 'Jeff', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: kevin, name: 'Kevin', description: 'Lorem ipsum dolor sit amet.' },
-  { imgSrc: silicon, name: 'Silicon', description: 'Lorem ipsum dolor sit amet.' },
+  { imgSrc: elon, name: 'Elon', description: 'surprise me anything is possible.' },
+  { imgSrc: idris, name: 'Idris', description: ' Winning Hearts and Loyalty.' },
+  { imgSrc: jeff, name: 'Jeff', description: 'Riding the Wave of Digital Influence.' },
+  { imgSrc: kevin, name: 'Kevin', description: 'Amplifying Reach Through Collaborative Narratives.' },
+  { imgSrc: silicon, name: 'Silicon', description: 'Making a Difference and Building Goodwill, its all about tech.' },
 ];
 
 const brandImages = [

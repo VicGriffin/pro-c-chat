@@ -74,7 +74,6 @@ function Login() {
         <form onSubmit={formik.handleSubmit} className="login-form__body">
           <div className="login-form__body__input-group">
             <label className="login-form__body__input-group__label">
-              Email
             </label>
             <input
               className="login-form__body__input-group__input"
@@ -92,7 +91,7 @@ function Login() {
           </div>
           <div className="login-form__body__input-group">
             <label className="login-form__body__input-group__label">
-              Password
+              
             </label>
             <input
               className="login-form__body__input-group__input"

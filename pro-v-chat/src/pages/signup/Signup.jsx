@@ -74,7 +74,7 @@ function Signup() {
           <h1>Sign Up</h1>
           <form className="signup-form" onSubmit={formik.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="username">username</label>
+              <label htmlFor="username"></label>
               <input
                 type="text"
                 className="form-control"
@@ -90,7 +90,7 @@ function Signup() {
               ) : null}
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email"></label>
               <input
                 type="email"
                 className="form-control"
@@ -106,7 +106,7 @@ function Signup() {
               ) : null}
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password"></label>
               <input
                 type="password"
                 className="form-control"
@@ -122,7 +122,7 @@ function Signup() {
               ) : null}
             </div>
             <div className="form-group">
-              <label htmlFor="confirmPassword">Confirm Password</label>
+              <label htmlFor="confirmPassword"></label>
               <input
                 type="password"
                 className="form-control"

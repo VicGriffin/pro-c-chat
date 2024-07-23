@@ -3,7 +3,7 @@ import { config } from 'dotenv';
 import cors from 'cors';
 import usersRouter from './routers/user.routes.js';  
 import loginRouter from './routers/login.routes.js';
-// import contactRouter from './routers/contact.routes.js'
+import contactRouter from './routers/contact.routes.js'
 
 config(); 
 
@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-// app.use('/users', contactRouter);
+app.use('/', contactRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

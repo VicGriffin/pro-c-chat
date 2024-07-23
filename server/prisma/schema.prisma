@@ -22,3 +22,11 @@ model User {
 
   @@map("users")
 }
+model Contact {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
