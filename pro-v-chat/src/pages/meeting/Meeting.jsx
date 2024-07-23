@@ -1,15 +1,28 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useLocation } from 'react-router-dom';
 import './meeting.css';
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 function Meeting() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const query = useQuery();
+
+  const idealistName = query.get('name') || '';
+  const projectTitle = query.get('title') || '';
+
+  const today = new Date().toISOString().split('T')[0];
+
+  const now = new Date().toLocaleTimeString('it-IT').slice(0, 5);
 
   const validationSchema = Yup.object({
-    date: Yup.date().required("Date is required"),
-    time: Yup.string().required("Time is required"),
+    date: Yup.date().min(today, "Cannot select past dates").required("Date is required"),
+    time: Yup.string().min(now, "cannot select past times" ).required("Time is required"),
     platform: Yup.string().required("Platform is required"),
     info: Yup.string(),
   });
@@ -52,22 +65,32 @@ function Meeting() {
   return (
     <div className="meeting-details">
       <h2>Schedule a Virtual Meeting</h2>
-      
+      <p>Idealist: {idealistName}</p>
+      <p>Project Title: {projectTitle}</p>
       <span className='circle one'></span>
-            <span className='circle two'></span>
+      <span className='circle two'></span>
       <form onSubmit={formik.handleSubmit}>
         <div className="input-container">
-          <label htmlFor="date"></label>
-          <input type="date" name="date" onChange={formik.handleChange} value={formik.values.date} />
+          <input
+            type="date"
+            name="date"
+            onChange={formik.handleChange}
+            value={formik.values.date}
+            min={today}
+          />
           {formik.touched.date && formik.errors.date && <p>{formik.errors.date}</p>}
         </div>
         <div className="input-container">
-          <label htmlFor="time"></label>
-          <input type="time" name="time" onChange={formik.handleChange} value={formik.values.time} />
+          <input
+            type="time"
+            name="time"
+            onChange={formik.handleChange}
+            value={formik.values.time}
+            min={formik.values.date === today ? now : ''}
+          />
           {formik.touched.time && formik.errors.time && <p>{formik.errors.time}</p>}
         </div>
         <div className="input-container">
-          <label htmlFor="platform"></label>
           <select name="platform" onChange={formik.handleChange} value={formik.values.platform}>
             <option value="" label="Select platform" />
             <option value="Zoom" label="Zoom" />

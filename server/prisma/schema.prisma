@@ -30,3 +30,14 @@ model Contact {
   message   String
   createdAt DateTime @default(now())
 }
+
+model Conant {
+  id        String   @id @default(uuid())
+  yourname  String
+  email     String   
+  phone     String
+  link      String    
+  coverletter String
+
+  @@map("Conant")
+}

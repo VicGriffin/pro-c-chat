@@ -13,6 +13,8 @@ import Ideas from "./pages/ideas/Ideas.jsx";
 import Conant from "./pages/cont/Conant.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Meeting from "./pages/meeting/Meeting.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      <ToastContainer />
     </AuthProvider>
   );
 }

@@ -4,6 +4,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import logo from "../../assets/logo/logo.png";
 import { useAuth } from "../../AuthContext.jsx";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
 
 const validationSchema = Yup.object({
@@ -18,12 +20,32 @@ function Login() {
   const { login } = useAuth();
 
   const notifySuccess = () => {
-    console.log("Login successful!");
-  };
+    toast.success('🦄 login success', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      })
+    };
 
   const notifyError = (message) => {
-    console.error(message);
-  };
+    toast.error('🦄 failed to login', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      })
+    };
 
   const handleSubmit = async (values) => {
     setError('');

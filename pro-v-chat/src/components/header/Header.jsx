@@ -24,7 +24,7 @@ function Header() {
       <div className="getstarted">
         {user ? (
           <div>
-            <span>Welcome to SFT {user.name}</span>
+            <span>Welcome to SFT {user.username}</span>
             <button onClick={logout}>Logout</button>
           </div>
         ) : (

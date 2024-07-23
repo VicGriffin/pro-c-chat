@@ -1,65 +1,34 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo/logo.png";
-import './ideas.css'
+import './ideas.css';
 
 function Ideas() {
+  const idealistName = 'Victor Griffin';
+  const projectTitle = 'Do Away with Old Clothes in Style';
+
   return (
     <>
-    <section className='ideas'>
-    <div className="logo">
-        <img src={logo} alt="logo" />
-      </div>
-      <div className="ideas-title">Ideas</div>
-        <div className="ideas-container">
-        <div className="ideas-content">
-                <div className="ideas-content-title">do away with old clothes in style</div>
-                <div className="ideas-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    euismod, libero eu aliquam vulputate, nunc nunc ultricies n
-                    is, ut lacinia libero nunc eu libero. Sed euismod, 
-                </div>
-                <div className="idealist-name">victor griffin</div>
-                <textarea name="message" id="" className='input'></textarea>
-                <button>send message</button>  
-                <button>schedule a meeting</button>
-            </div>
-            <div className="ideas-content">
-                <div className="ideas-content-title">do away with old clothes in style</div>
-                <div className="ideas-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    euismod, libero eu aliquam vulputate, nunc nunc ultricies n
-                    is, ut lacinia libero nunc eu libero. Sed euismod,
-                </div>
-                <div className="idealist-name">victor griffin</div>
-                <textarea name="message" id="" className='input'></textarea>
-                <button>send message</button>  
-                <button>schedule a meeting</button>
-            </div>
-            <div className="ideas-content">
-                <div className="ideas-content-title">do away with old clothes in style</div>
-                <div className="ideas-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    euismod, libero eu aliquam vulputate, nunc nunc ultricies n
-                    is, ut lacinia libero nunc eu libero. Sed euismod,
-                </div>
-                <div className="idealist-name">victor griffin</div>
-                <textarea name="message" id="" className='input'></textarea>
-                <button>send message</button>  
-                <button>schedule a meeting</button>
-            </div>
-            <div className="ideas-content">
-                <div className="ideas-content-title">do away with old clothes in style</div>
-                <div className="ideas-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    euismod, libero eu aliquam vulputate, nunc nunc ultricies n
-                    is, ut lacinia libero nunc eu libero. Sed euismod, 
-                </div>
-                <div className="idealist-name">victor griffin</div>
-                <textarea name="message" id="" className='input'></textarea>
-                <button>send message</button>  
-                <Link to="/meeting"><button>schedule a meeting</button></Link>
-            </div>
+      <section className='ideas'>
+        <div className="logo">
+          <img src={logo} alt="logo" />
         </div>
-    </section>
+        <div className="ideas-title">Ideas</div>
+        <div className="ideas-container">
+          <div className="ideas-content">
+            <div className="ideas-content-title">{projectTitle}</div>
+            <div className="ideas-content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero eu aliquam vulputate, nunc nunc ultricies nisl, ut lacinia libero nunc eu libero. Sed euismod,
+            </div>
+            <div className="idealist-name">{idealistName}</div>
+            <Link to={`/meeting?name=${encodeURIComponent(idealistName)}&title=${encodeURIComponent(projectTitle)}`}>
+              <button>Schedule a Meeting</button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
-  )
+  );
 }
 
-export default Ideas
+export default Ideas;

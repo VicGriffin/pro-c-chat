@@ -1,9 +1,9 @@
 import './conant.css';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom';
-import logo from "../../assets/logo/logo.png";
+import emailjs from '@emailjs/browser';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -13,6 +13,7 @@ function Conant() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const query = useQuery();
+  const form = useRef();
 
   const sponsorName = query.get('name');
   const sponsorDescription = query.get('description');
@@ -30,7 +31,7 @@ function Conant() {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('http://localhost:3001/users/contacts', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,8 +60,25 @@ function Conant() {
       message: '',
     },
     validationSchema: validationSchema,
-    onSubmit: handleSubmit,
+    onSubmit: (values, { resetForm }) => {
+      handleSubmit(values);
+      sendEmail();
+      resetForm();
+    },
   });
+
+  const sendEmail = () => {
+    emailjs
+      .sendForm('service_xjiv8cj', 'template_c278qsn', form.current, 'GDx5TJwJersgPgWeI')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <div className="conant">
@@ -71,7 +89,7 @@ function Conant() {
         <span className='circle one'></span>
         <span className='circle two'></span>
 
-        <form onSubmit={formik.handleSubmit}>
+        <form ref={form} onSubmit={formik.handleSubmit}>
           <h3 className="titl">Message {sponsorName}</h3>
           <p>{sponsorDescription}</p>
           <div className="input-container">

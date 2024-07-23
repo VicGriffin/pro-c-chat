@@ -4,7 +4,7 @@ import cors from 'cors';
 import usersRouter from './routers/user.routes.js';  
 import loginRouter from './routers/login.routes.js';
 import contactRouter from './routers/contact.routes.js'
-
+import conantRouter from './routers/conant.routes.js';
 config(); 
 
 const app = express();
@@ -19,6 +19,7 @@ app.use(express.json());
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/', contactRouter);
+app.use('/', conantRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
