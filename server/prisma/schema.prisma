@@ -52,3 +52,13 @@ model Meeting {
   
   @@map("Meeting")
 }
+
+model Idea {
+  id        String   @id @default(uuid())
+  title     String
+  description String
+  idealistName String
+  email      String
+
+  @@map("Idea")
+}

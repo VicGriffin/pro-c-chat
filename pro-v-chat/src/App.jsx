@@ -8,6 +8,7 @@ import Sponsors from "./pages/sponsors/Sponsors.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Blog from "./pages/blog/Blog.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import Postidea from "./pages/postIdea/Postidea.jsx";
 import { AuthProvider } from "./AuthContext.jsx";
 import Ideas from "./pages/ideas/Ideas.jsx";
 import Conant from "./pages/cont/Conant.jsx";
@@ -15,6 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Meeting from "./pages/meeting/Meeting.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Admin from "./components/admin/Admin.jsx";
 import ChatBotComponent from "./components/chatbot/ChatBot.jsx";
 import "./App.css";
 
@@ -33,6 +35,8 @@ function App() {
           <Route path="/ideas" element={<Ideas />} />
           <Route path="/conant" element={<Conant />} />
           <Route path="/meeting" element={<Meeting />} />
+          <Route path="/post" element={<ProtectedRoute><Postidea /></ProtectedRoute>} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       <ChatBotComponent />
         <Footer />

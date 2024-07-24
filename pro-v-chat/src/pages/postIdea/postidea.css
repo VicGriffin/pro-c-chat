@@ -1,0 +1,9 @@
+.post-idea {
+    max-width: 600px;
+    margin-top: 120px;
+    margin-left: 30%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: black;
+  }

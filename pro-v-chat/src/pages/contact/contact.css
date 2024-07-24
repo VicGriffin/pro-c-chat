@@ -47,7 +47,8 @@
     width: 130px;
     height: 130px;
     top: 130px;
-    right: -40px;
+    right: 40px;
+    overflow: hidden;
 }
 
 .circle.two {

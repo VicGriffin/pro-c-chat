@@ -16,7 +16,7 @@ function Header() {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/sponsors">Sponsors</Link></li>
-          <li><Link to="#">Opportunities</Link></li>
+          <li><Link to="/post">submit project</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
@@ -28,7 +28,7 @@ function Header() {
             <button onClick={logout}>Logout</button>
           </div>
         ) : (
-          <Link to="/login">Get Started</Link>
+          <Link to="/admin">Get Started</Link>
         )}
       </div>
     </header>
