@@ -1,10 +1,12 @@
 import React from 'react'
 import logo from "../../assets/logo/logo.png";
 import './blog.css'
+import Header from '../../components/header/Header';
 
 function Blog() {
   return (
     <>
+    <Header/>
       <div class="blog-container">
       <div className="logo">
           <img src={logo} alt="logo" />
