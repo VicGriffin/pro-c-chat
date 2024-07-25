@@ -1,5 +1,9 @@
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import AdminDashboard from "./pages/ADmin/AdminDashboard.jsx";
+import AdminRegister from "./pages/ADmin/Adminregister.jsx";
+import AdminSignin from "./pages/ADmin/AdminSignin.jsx";
+import ManageUsers from "./pages/ADmin/ManageUsers.jsx";
 import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/signup/Signup.jsx";
@@ -27,6 +31,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/adminDashboard" element={<AdminDashboard />} />
+          <Route path="/adminRegister" element={<AdminRegister />} />
+          <Route path="/adminSignin" element={<AdminSignin />} />
+          <Route path="/manageUsers" element={<ManageUsers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/sponsors" element={<ProtectedRoute><Sponsors /></ProtectedRoute>} />

@@ -1,0 +1,12 @@
+.manage-users {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.manage-users h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+

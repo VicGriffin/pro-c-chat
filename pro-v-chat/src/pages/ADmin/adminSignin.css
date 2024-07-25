@@ -1,0 +1,33 @@
+.admin-signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.admin-signin h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.admin-signin form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-signin input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.admin-signin button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

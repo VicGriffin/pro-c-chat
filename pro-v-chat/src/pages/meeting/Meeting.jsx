@@ -123,7 +123,7 @@ function Meeting() {
           {formik.touched.platform && formik.errors.platform && <p>{formik.errors.platform}</p>}
         </div>
         <div className="input-container">
-          <label htmlFor="meetingId">Meeting ID</label>
+          <label htmlFor="meetingId">Meeting link</label>
           <textarea name="meetingId" onChange={formik.handleChange} value={formik.values.meetingId}></textarea>
           {formik.touched.meetingId && formik.errors.meetingId && <p>{formik.errors.meetingId}</p>}
         </div>
