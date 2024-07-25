@@ -50,10 +50,9 @@ function AdminDashboard() {
           <button>ideas</button></Link>
         </div>
         <div className="dashboard-card">
-          <h2>Reach Out from Users</h2>
-          <p>{data.getintouchCount}</p>
-          <Link to="">
-          <button>getintouch</button></Link>
+          <h2>Projects</h2>
+          <Link to="/userResponse">
+          <button>projects</button></Link>
         </div>
       </div>
     </div>

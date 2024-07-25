@@ -58,6 +58,8 @@ function Ideas() {
             </div>
           ))}
         </div>
+        
+      <Link to="/adminDashboard"><button>back</button></Link>
       </section>
     </>
   );

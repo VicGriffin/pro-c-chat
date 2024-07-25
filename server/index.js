@@ -21,10 +21,10 @@ app.use(express.json());
 
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-app.use('/contact', contactRouter);
-app.use('/conant', conantRouter);
-app.use('/meeting', meetingRouter);
-app.use('/ideas', ideaRouter);
+app.use('/', contactRouter);
+app.use('/', conantRouter);
+app.use('/', meetingRouter);
+app.use('/', ideaRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

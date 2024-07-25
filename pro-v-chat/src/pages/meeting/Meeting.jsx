@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState, useRef } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -132,6 +133,7 @@ function Meeting() {
         </button>
         {error && <div className="error"><p>{error}</p></div>}
       </form>
+      <Link to="/ideas"><button>back</button></Link>
     </div>
   );
 }

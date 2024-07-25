@@ -1,0 +1,45 @@
+.responses {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.responses-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.responses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.responses-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.responses-content-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.responses-content-text {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

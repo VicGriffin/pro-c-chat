@@ -23,6 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Admin from "./components/admin/Admin.jsx";
 import Sidebar from "./pages/ADmin/Sidebar.jsx";
 import ChatBotComponent from "./components/chatbot/ChatBot.jsx";
+import UserResponses from "./pages/getintouch/UserResponses.jsx";
 import "./App.css";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
           <Route path="/ideas" element={<Ideas />} />
           <Route path="/conant" element={<Conant />} />
+          <Route path="/userResponse" element={<UserResponses/>}/>
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/post" element={<ProtectedRoute><Postidea /></ProtectedRoute>} />
           <Route path="/admin" element={<Admin />} />

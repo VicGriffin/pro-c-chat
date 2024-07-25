@@ -1,3 +1,4 @@
+// Login.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -30,11 +31,11 @@ function Login() {
       progress: undefined,
       theme: "light",
       transition: Bounce,
-      })
-    };
+    });
+  };
 
   const notifyError = (message) => {
-    toast.error('🦄 failed to login', {
+    toast.error(`🦄 ${message}`, {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -44,8 +45,8 @@ function Login() {
       progress: undefined,
       theme: "light",
       transition: Bounce,
-      })
-    };
+    });
+  };
 
   const handleSubmit = async (values) => {
     setError('');
@@ -61,7 +62,7 @@ function Login() {
       setLoading(false);
       if (response.ok) {
         const userData = await response.json();
-        if (login) login(userData);
+        login(userData, 'user');
         notifySuccess();
         navigate('/');
       } else {
@@ -95,8 +96,7 @@ function Login() {
         <div className="login-form__header">Login</div>
         <form onSubmit={formik.handleSubmit} className="login-form__body">
           <div className="login-form__body__input-group">
-            <label className="login-form__body__input-group__label">
-            </label>
+            <label className="login-form__body__input-group__label"></label>
             <input
               className="login-form__body__input-group__input"
               type="text"
@@ -112,9 +112,7 @@ function Login() {
             ) : null}
           </div>
           <div className="login-form__body__input-group">
-            <label className="login-form__body__input-group__label">
-              
-            </label>
+            <label className="login-form__body__input-group__label"></label>
             <input
               className="login-form__body__input-group__input"
               type="password"

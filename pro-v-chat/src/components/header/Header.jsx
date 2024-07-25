@@ -5,7 +5,7 @@ import './header.css';
 import logo from '../../assets/logo/logo.png';
 
 function Header() {
-  const { user, logout } = useAuth();
+  const { user, logout, loginType } = useAuth();
 
   return (
     <header>
@@ -24,7 +24,7 @@ function Header() {
       <div className="getstarted">
         {user ? (
           <div>
-            <span>Welcome to SFT {user.username}</span>
+            <span>Welcome {loginType ==='admin'? 'Admin' : 'to SFT'}</span>
             <button onClick={logout}>Logout</button>
           </div>
         ) : (
