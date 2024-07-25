@@ -3,10 +3,11 @@ import { config } from 'dotenv';
 import cors from 'cors';
 import usersRouter from './routers/user.routes.js';  
 import loginRouter from './routers/login.routes.js';
-import contactRouter from './routers/contact.routes.js'
+import contactRouter from './routers/contact.routes.js';
 import conantRouter from './routers/conant.routes.js';
 import meetingRouter from './routers/meeting.routes.js';
-import ideaRouter from './routers/idea.routes.js'
+import ideaRouter from './routers/idea.routes.js';
+
 config(); 
 
 const app = express();
@@ -20,10 +21,10 @@ app.use(express.json());
 
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-app.use('/', contactRouter);
-app.use('/', conantRouter);
-app.use('/', meetingRouter);
-app.use('/', ideaRouter);
+app.use('/contact', contactRouter);
+app.use('/conant', conantRouter);
+app.use('/meeting', meetingRouter);
+app.use('/ideas', ideaRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import './Adminregister.css';
+import './admin.css';
 import { useNavigate } from 'react-router-dom';
 import { apiBase } from '../../utils/config';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Sidebar from '../pages/Admin/Sidebar';
+import Sidebar from './Sidebar';
 
 const AdminRegister = () => {
   const [loading, setLoading] = useState(false);

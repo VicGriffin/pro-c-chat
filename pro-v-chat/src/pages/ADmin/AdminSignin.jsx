@@ -9,9 +9,7 @@ function AdminSignin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform signin logic here
-    // If successful, navigate to AdminDashboard
-    navigate('/admin-dashboard');
+    navigate('/adminDashboard');
   };
 
   return (

@@ -21,6 +21,7 @@ import Meeting from "./pages/meeting/Meeting.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Admin from "./components/admin/Admin.jsx";
+import Sidebar from "./pages/ADmin/Sidebar.jsx";
 import ChatBotComponent from "./components/chatbot/ChatBot.jsx";
 import "./App.css";
 

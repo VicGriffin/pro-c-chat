@@ -20,3 +20,12 @@ export const createUsersRoute = async (req, res) => {
     res.status(500).json({ success: false, message: e.message });
   }
 };
+
+export const getUsers = async (req, res) => {
+  try {
+    const users = await prisma.user.count();
+    res.status(200).json({ count: users });
+  } catch (error) {
+    res.status(500).json({ error: 'failed to get users' });
+  }
+};
